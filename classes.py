@@ -1,3 +1,5 @@
+from PIL import Image
+
 class ImageRotator:
     def __init__(self, image_path):
         self.image_path = image_path
