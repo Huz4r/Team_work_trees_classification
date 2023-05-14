@@ -1,8 +1,10 @@
 from PIL import Image
 import os
+import classes
 
 # Open the image file
-image = Image.open("H:\Python\Repozytoria\Team_work_trees_clasification\df\Original\Beech\IMG20211213122853.jpg")
+path_to_image = 'H:\Python\Repozytoria\Team_work_trees_clasification\df\Original\Beech\IMG20211213122853.jpg'
+image = Image.open(path_to_image)
 # Get the resolution (width and height) of the image
 width, height = image.size
 print(f"Image resolution: {width}x{height}")
@@ -69,3 +71,12 @@ for filename in os.listdir(input_folder):
 
 print("Image resizing and saving complete.")
 '''
+
+# Create an instance of the ImageRotator class
+rotator = ImageRotator(path_to_image)
+
+# Rotate the image by 45 degrees
+rotator.rotate(45)
+
+# Print the current angle of rotation
+print(rotator.angle)  # Output: 45
