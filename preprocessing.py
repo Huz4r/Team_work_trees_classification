@@ -46,6 +46,7 @@ for filename in os.listdir(input_folder):
         image.close()
 
 print("Image resizing and saving complete.")
+Jakiś tekst
 '''
 
 # Augumentation segment
