@@ -22,8 +22,8 @@ print(f"Image resolution: {width}x{height}")
 # Create an instance of the ImageRotator class
 rotator = ImageRotator(path_to_image)
 
-# Rotate the image by 45 degrees
+# Rotate the image by x degrees
 rotator.rotate(3)
 
 # Print the current angle of rotation
-print(rotator.angle)  # Output: 45
+print(rotator.angle)
