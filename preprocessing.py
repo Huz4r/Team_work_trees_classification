@@ -1,21 +1,19 @@
 from PIL import Image
 import os
 
+# Imgage scalling function
+
 # Open the image file
 image = Image.open("H:\Python\Repozytoria\Team_work_trees_clasification\df\Original\Beech\IMG20211213122853.jpg")
 # Get the resolution (width and height) of the image
 width, height = image.size
 print(f"Image resolution: {width}x{height}")
 target_resolution = 512
-rescale_value = 100 - (target_resolution / width)
+rescale_value = (target_resolution / width) * 100
 print(f"Rescale value: {rescale_value}")
 width = int(image.size[1] * rescale_value / 100)
 height = int(image.size[0] * rescale_value / 100)
 print(f"Image resolution: {width}x{height}")
-
-
-
-
 
 '''
 input_folder = "H:\Python\Repozytoria\Team_work_trees_clasification\df\Original\Pine"
@@ -45,3 +43,8 @@ for filename in os.listdir(input_folder):
 
 print("Image resizing and saving complete.")
 '''
+
+# Image agumentation function
+
+
+# Image proprocessing function
