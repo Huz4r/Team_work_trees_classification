@@ -1,5 +1,6 @@
 from PIL import Image
 import os
+from keras.preprocessing.image import ImageDataGenerator
 
 # Open the image file
 image = Image.open("H:\Python\Repozytoria\Team_work_trees_clasification\df\Original\Beech\IMG20211213122853.jpg")
@@ -16,9 +17,6 @@ print(f"Image resolution: {width}x{height}")
 
 
 # Augumentation
-from keras.preprocessing.image import ImageDataGenerator
-
-
 def augment_data(x_train):
     # create an instance of ImageDataGenerator class
     datagen = ImageDataGenerator(
@@ -39,7 +37,7 @@ def augment_data(x_train):
 
 augmented_data = augment_data(x_train)
 generated_images = augmented_data.flow(x_train, batch_size=32)
-
+TEST
 
 '''
 input_folder = "H:\Python\Repozytoria\Team_work_trees_clasification\df\Original\Pine"
