@@ -1,5 +1,6 @@
 from PIL import Image
 import os
+from keras.preprocessing.image import ImageDataGenerator
 from classes import *
 
 # Open the image file
